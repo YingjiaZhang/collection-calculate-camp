@@ -1,8 +1,11 @@
 'use strict';
 
 function choose_even(collection) {
-
-  //在这里写入代码
+  return collection.filter(function (num) {
+    if (num === 0 || num % 2 !== 0) {
+      return num;
+    }
+  });
 }
 
 module.exports = choose_even;
