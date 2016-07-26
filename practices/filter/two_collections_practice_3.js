@@ -2,7 +2,18 @@
 
 function choose_divisible_integer(collection_a, collection_b) {
 
-  //在这里写入代码
+  return collection_a.filter(function (num_a) {
+    let exist = collection_b.find(function (num_b) {
+      return num_a % num_b === 0;
+    });
+    if (exist) {
+      return true;
+    } else {
+      return false
+    }
+
+  });
+
 }
 
 module.exports = choose_divisible_integer;
